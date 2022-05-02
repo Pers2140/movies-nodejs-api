@@ -1,7 +1,8 @@
+const DATABASE_URL = require('dotenv').config()
 //create the client class
 const { MongoClient } = require("mongodb")
 // URI for Mongo database
-const uri = "mongodb+srv://dboi:H2RFq79VzBFeyT9@cluster0.pon7o.mongodb.net/MoviesDB?retryWrites=true"
+const uri = process.env.DATABASE_URL
 
 // Query Mongo DB for movie details
 async function dbSearch(searchTerm) {

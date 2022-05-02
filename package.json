@@ -4,7 +4,7 @@
   "description": "nodejs + mongodb api backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +12,9 @@
     "nodemon": "^2.0.16"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "express": "^4.18.0",
+    "mongoose": "^6.3.1",
     "uuid": "^8.3.2"
   }
 }
