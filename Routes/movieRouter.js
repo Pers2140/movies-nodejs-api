@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   // Search for user input
   console.log(`sending all movies to user`);
   returnAllMovies().then((e) => {
-    res.send(e);
+    res.json(e);
   });
 });
 
@@ -16,7 +16,7 @@ router.get("/:movie", (req, res) => {
   // Search for user input
   console.log(`searching for ${req.params["movie"]}`);
   dbSearch(req.params["movie"]).then((result) => {
-    res.send(result);
+    res.json(result);
   });
 });
 

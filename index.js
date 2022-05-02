@@ -38,17 +38,3 @@ app.get("/", (req, res) => {
   console.log("main page requested");
   res.status(200).send("you have requested the main page");
 });
-//request for profile page
-app.get("/profile", (req, res) => {
-  //   res.render('profile')
-});
-
-//request for shows page
-app.get("/shows", (req, res) => {
-  // res.render('shows')
-});
-
-// 404 page
-app.use((req, res) => {
-  // res.render('404_page')
-});
