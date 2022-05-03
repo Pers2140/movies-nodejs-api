@@ -44,7 +44,7 @@ async function dbAddComment(movie, comment) {
       { $set: { comments: newComments } }
     );
   } catch (ex) {
-    console.error(`Something bad happend ${ex}`);
+    console.error(`Could not update comments ${ex}`);
   } finally {
     client.close();
   }

@@ -3,10 +3,9 @@ const app = express();
 const path = require("path");
 // const cors = require('cors')
 const movieRouter = require("./Routes/movieRouter");
-
-app.use(express.json()); // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
-// app.use(cors() )
+// app.use(cors() ) 
+app.use(express.json()); //Parse URL-encoded bodies
+app.use(express.urlencoded()); //Parse URL-encoded bodies
 
 // Main site port
 const PORT = process.env.PORT || 8000;

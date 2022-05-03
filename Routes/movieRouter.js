@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { dbSearch, dbAddComment, returnAllMovies } = require("../MongoDB");
 
+
 // return all movies as JSON
 router.get("/", (req, res) => {
   // Search for user input
