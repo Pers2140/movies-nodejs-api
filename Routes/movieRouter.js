@@ -6,9 +6,15 @@ const { dbSearch, dbAddComment, returnAllMovies } = require("../MongoDB");
 // return all movies as JSON
 router.get("/", (req, res) => {
   // Search for user input
-  console.log(`sending all movies to user`);
+  const page = req.query.page
+  const limit = req.query.limit
+  const startIndex = ( page -1 ) * limit
+  const endIndex = page * limit
+  console.log(`user requested page ${req.query.page} & limit ${req.query.limit}`);
+
   returnAllMovies().then((e) => {
-    res.json(e);
+    const result = e.slice(startIndex,endIndex)
+    res.json(result);
   });
 });
 

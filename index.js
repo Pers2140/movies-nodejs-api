@@ -4,7 +4,6 @@ const cors = require('cors')
 const movieRouter = require("./Routes/movieRouter");
 // app.use(cors() ) 
 app.use(express.json()); //Parse URL-encoded bodies
-app.use(express.urlencoded()); //Parse URL-encoded bodies
 app.use(cors())
 
 // Main site port
