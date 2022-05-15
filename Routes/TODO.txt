@@ -1,0 +1,2 @@
+// create main page to explain how to use API at "/"
+// Add search query

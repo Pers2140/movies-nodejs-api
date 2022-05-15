@@ -2,20 +2,25 @@ const express = require("express");
 const router = express.Router();
 const { dbSearch, dbAddComment, returnAllMovies } = require("../MongoDB");
 
-
 // return all movies as JSON
 router.get("/", (req, res) => {
-  // Search for user input
-  const page = req.query.page
-  const limit = req.query.limit
-  const startIndex = ( page -1 ) * limit
-  const endIndex = page * limit
-  console.log(`user requested page ${req.query.page} & limit ${req.query.limit}`);
+  if (Object.keys(req.query).length) {
+    // Return user requested query
+    const page = req.query.page;
+    const limit = req.query.limit;
+    const startIndex = (page - 1) * limit;
+    const endIndex = page * limit;
+    console.log(
+      `user requested page ${req.query.page} & limit ${req.query.limit}`
+    );
 
-  returnAllMovies().then((e) => {
-    const result = e.slice(startIndex,endIndex)
-    res.json(result);
-  });
+    returnAllMovies().then((e) => {
+      const result = e.slice(startIndex, endIndex);
+      res.json(result);
+    });
+  } else {
+    res.send("main page bitch");
+  }
 });
 
 // return json based on user search term
