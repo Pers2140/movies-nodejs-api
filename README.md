@@ -3,7 +3,9 @@
 This project uses a combination of Google drive API,
 MongoDB & MongooseJS to store and update this REST API
 
-## <a href="https://movies-nodeapi.herokuapp.com/movies/?page=1&limit=5" target="_blank">➡️ Check out live app Here</a>
+
+[![Live App](https://img.shields.io/static/v1?message=LiveApp&logo=heroku&labelColor=430098&color=1182c3&logoColor=white&label=%20&style=plastic)](https://movies-nodeapi.herokuapp.com/movies/?page=1&limit=5)
+
 
 ### You can change the limit and page number to fit your needs
 <p>/movies/?page=1&limit=5<p>
