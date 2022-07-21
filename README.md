@@ -1,4 +1,4 @@
-# Google Movie Database API 🎥
+# Google Movies API 🎥
 
 This project uses a combination of Google drive API,
 MongoDB & MongooseJS to store and update this REST API
